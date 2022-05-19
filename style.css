@@ -24,3 +24,9 @@ body {
   width: auto;
   height: auto;
 }
+
+img {
+  display: block;
+  max-width: 64px;
+  max-height: 64px;
+}
