@@ -24,6 +24,7 @@ const memesImages = [
 ];
 
 const imgs = document.querySelectorAll("img");
+const body = document.querySelector("body");
 
 for (let i = 0; i < imgs.length; i++) {
   const randomImg = Math.floor(Math.random() * memesImages.length);
@@ -64,4 +65,27 @@ if (currentURL === "https://www.sephora.com/") {
   window.location.replace(
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
   );
+} else if (currentURL === "https://www.instagram.com/") {
+  window.location.replace(
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+  );
 }
+
+//added music function here
+let theButton = document.querySelector("#musicbutton");
+
+theButton.addEventListener("click", function playAudio(body) {
+  let audio = document.createElement("audio");
+  audio.controls = true;
+  audio.autoplay = true;
+  audio.hidden = true;
+
+  let source = document.createElement("source");
+  source.setAttribute(
+    "src",
+    "https://www.myinstants.com/media/sounds/work.mp3"
+  );
+  source.setAttribute("type", "audio/mpeg");
+  audio.appendChild(source);
+  body.appendChild(audio);
+});

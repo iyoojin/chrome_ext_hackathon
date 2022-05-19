@@ -16,3 +16,11 @@ body {
   color: rgb(0, 0, 0);
   padding: 0px 10px 10px 10px;
 }
+
+#brainlight {
+  display: block;
+  max-width: 48px;
+  max-height: 48px;
+  width: auto;
+  height: auto;
+}
